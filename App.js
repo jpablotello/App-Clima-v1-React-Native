@@ -23,7 +23,7 @@ const App = () => {
       if(consultar){
         console.log('Test', consultar)
         const keyWeather = 'f7ca4e0d6b854b6b6a4e3178ff84729c';
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${keyWeather}`
+        const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad.trim()},${pais}&appid=${keyWeather}`
 
         try {
           const respuesta = await fetch(url);
