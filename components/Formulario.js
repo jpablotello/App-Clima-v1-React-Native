@@ -28,6 +28,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
         if(pais.trim() === '' || ciudad.trim() === ''){
             mostrarError();
             setConsultar(false);
+            console.log('Consultar clima false')
             return;
         }
 
@@ -62,7 +63,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                 <View>
                     <Picker
                         selectedValue={pais}
-                        itemStyle={{height: 120, backgroundColor: '#F0F'}}
+                        itemStyle={{height: 120, backgroundColor: '#61AFEE'}}
                         onValueChange={ pais => setBusqueda({ ...busqueda, pais})}
                     >
                         <Picker.Item label="-- Sleccione un país --" value=""/>
@@ -72,6 +73,7 @@ const Formulario = ({busqueda, setBusqueda, setConsultar}) => {
                         <Picker.Item label="Estados Unidos" value="US"/>
                         <Picker.Item label="Italia" value="IT"/>
                         <Picker.Item label="México" value="MX"/>
+                        <Picker.Item label="Paraguay" value="PY"/>
                         <Picker.Item label="Perú" value="PE"/>
                     </Picker>
                 </View>
